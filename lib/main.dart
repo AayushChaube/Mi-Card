@@ -14,25 +14,33 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                width: 30.0,
-                color: Colors.white,
-                child: const Text('Container 1'),
-              ),
-              const SizedBox(
-                width: 30.0,
-              ),
-              Container(
-                color: Colors.blue,
-                child: const Text('Container 2'),
-              ),
-              Container(
+                width: 100.0,
                 color: Colors.red,
-                child: const Text('Container 3'),
+              ),
+              Column(
+                children: [
+                  Container(
+                    height: 100.0,
+                    width: 100.0,
+                    color: Colors.yellow,
+                  ),
+                  Container(
+                    height: 100.0,
+                    width: 100.0,
+                    color: Colors.green,
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+              ),
+              Container(
+                width: 100.0,
+                color: Colors.blue,
               ),
             ],
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
           ),
         ),
       ),
