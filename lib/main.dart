@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Text(
-                'ASSOCIATE SOFTWARE DEVELOPER',
+                'ASSOCIATE SOFTWARE ENGINEER',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Source Sans Pro',
                   color: Colors.teal.shade100,
@@ -75,11 +77,11 @@ class MyApp extends StatelessWidget {
                 ),
                 child: ListTile(
                   title: Text(
-                    'aayush@indigitalit.com',
+                    'chaubeaayush@gmail.com',
                     style: TextStyle(
                       color: Colors.teal.shade900,
                       fontFamily: 'Source Sans Pro',
-                      fontSize: 20.0,
+                      fontSize: 18.0,
                     ),
                   ),
                   leading: const Icon(
