@@ -14,14 +14,15 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage(
                   'images/aayush.jpg',
                 ),
               ),
-              Text(
+              const Text(
                 'Aayush Chaube',
                 style: TextStyle(
                   fontFamily: 'Pacifico',
@@ -40,58 +41,51 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                margin: EdgeInsets.symmetric(
-                  vertical: 10.0,
-                  horizontal: 25.0,
-                ),
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+91 97687 54720',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20.0,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                width: 150.0,
+                height: 20.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                margin: EdgeInsets.symmetric(
+              Card(
+                margin: const EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
                 ),
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                child: ListTile(
+                  title: Text(
+                    '+91 97687 54720',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
                     ),
-                    SizedBox(
-                      width: 10.0,
+                  ),
+                  leading: const Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                ),
+              ),
+              Card(
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  title: Text(
+                    'aayush@indigitalit.com',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
                     ),
-                    Text(
-                      'aayush@indigitalit.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20.0,
-                      ),
-                    ),
-                  ],
+                  ),
+                  leading: const Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
                 ),
               ),
             ],
